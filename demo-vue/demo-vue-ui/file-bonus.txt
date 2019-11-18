@@ -1,0 +1,55 @@
+List Header
+<th scope="col">Id</th>
+<th scope="col">Họ Và Tên</th>
+<th scope="col">Địa Chỉ</th>
+<th scope="col">Tuổi</th>
+th scope="col">Công Ty</th>
+<th scope="col">Ảnh Đại Diện</th>
+<th scope="col">Hành Động</th>
+
+Danh sách các nhân viên 
+<tr>
+    <th scope="row">{{staff.id}}</th>
+    <td>{{staff.name}}</td>
+    <td class="editWAddress">{{staff.address}}</td>
+    <td>{{staff.age}}</td>
+    <td>{{staff.company}}</td>
+    <td class="editImage">
+        <img v-bind:src="staff.avatar" alt="image">
+    </td>
+    <td>
+        <button class="mx-1">Edit</button>
+        <button @click="delStaff(staff.id)" class="mx-1">Delete</button>
+    </td>
+</tr> 
+
+Các nút modal trong bootstrap-vue
+<!-- <b-button id="show-btn" @click="showModal">Open Modal</b-button>
+<b-button id="toggle-btn" @click="toggleModal">Toggle Modal</b-button> -->
+<!-- <b-button class="mt-2" variant="outline-warning" block @click="toggleModal">Toggle Me</b-button> -->
+
+Dữ liệu test
+// {
+//     id: 1,
+//     name: 'Nguyễn Văn A',
+//     address: '140-142 Lê Lợi, phường Hải Châu, Quận Hải Châu, thành phố Đà Nẵng',
+//     age: 21,
+//     company: 'Chi Nhánh Đà Nẵng',
+//     avatar: 'http://topvietnam.com.vn/wp-content/uploads/2019/02/ca-si-noi-tieng-1.jpg'
+// },
+// {
+//     id: 2,
+//     name: 'Nguyễn Văn B',
+//     address: '140-142 Lê Lợi, phường Hải Châu, Quận Hải Châu, thành phố Đà Nẵng',
+//     age: 22,
+//     company: 'Chi Nhánh Đà Nẵng',
+//     avatar: 'http://topvietnam.com.vn/wp-content/uploads/2019/02/ca-si-noi-tieng-1.jpg'
+// },
+// {
+//     id: 3,
+//     name: 'Nguyễn Văn C',
+//     address: '140-142 Lê Lợi, phường Hải Châu, Quận Hải Châu, thành phố Đà Nẵng',
+//     age: 23,
+//     company: 'Chi Nhánh Đà Nẵng',
+//     avatar: 'http://topvietnam.com.vn/wp-content/uploads/2019/02/ca-si-noi-tieng-1.jpg'
+// },
